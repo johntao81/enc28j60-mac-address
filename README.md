@@ -32,7 +32,11 @@ sudo systemctl enable setmac.service
 `sudo nano /etc/systemd/network/00-eth0.link`
 
 ```
+[Match]
+Interface=eth0
+
 [Link]
+MACAddress=b8:27:eb:5e:39:dc
 Duplex=full
 AutoNegotiation=no
 ```
