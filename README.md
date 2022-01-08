@@ -31,7 +31,7 @@ After=sys-subsystem-net-devices-eth0.device
 [Service]
 Type=oneshot
 ExecStart=/sbin/ip link set dev eth0 down
-ExecStart=/sbin/ip link set dev eth0 address b8:27:eb:5e:39:db
+ExecStart=/sbin/ip link set dev eth0 address b8:27:eb:00:00:00
 ExecStart=/sbin/ip link set dev eth0 up
 
 [Install]
