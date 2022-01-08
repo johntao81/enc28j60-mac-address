@@ -45,7 +45,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable setmac.service
 ```
 
-### Check duplex mode
+## Check duplex mode
 ```
 pi@octopi:~ $ sudo ethtool eth0
 Settings for eth0:
