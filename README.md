@@ -1,6 +1,21 @@
 # enc28j60-mac-address
 Notes for setting the MAC address on the ENC28J60 module for Raspberry Pi
 
+## Method #1
+`sudo nano /etc/systemd/network/00-eth0.link`
+
+```
+[Match]
+Interface=eth0
+
+[Link]
+MACAddress=b8:27:eb:00:00:00
+Duplex=full
+AutoNegotiation=no
+```
+
+## Method 2
+
 Reference: https://www.raspberrypi-spy.co.uk/2020/05/adding-ethernet-to-a-pi-zero/
 
 `sudo nano /lib/systemd/system/setmac.service`
@@ -29,17 +44,8 @@ sudo chmod 644 /lib/systemd/system/setmac.service
 sudo systemctl daemon-reload
 sudo systemctl enable setmac.service
 ```
-`sudo nano /etc/systemd/network/00-eth0.link`
 
-```
-[Match]
-Interface=eth0
-
-[Link]
-MACAddress=b8:27:eb:5e:39:dc
-Duplex=full
-AutoNegotiation=no
-```
+### Check duplex mode
 ```
 pi@octopi:~ $ sudo ethtool eth0
 Settings for eth0:
