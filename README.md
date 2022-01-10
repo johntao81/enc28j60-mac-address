@@ -5,7 +5,6 @@ Notes for setting the MAC address on the ENC28J60 module for Raspberry Pi
 ```
 dtparam=spi=on 
 dtoverlay=enc28j60
-
 ```
 
 ## Method #1
