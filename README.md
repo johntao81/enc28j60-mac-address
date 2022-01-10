@@ -1,6 +1,13 @@
 # enc28j60-mac-address
 Notes for setting the MAC address on the ENC28J60 module for Raspberry Pi
 
+`sudo nano /boot/config.txt`
+```
+dtparam=spi=on 
+dtoverlay=enc28j60
+
+```
+
 ## Method #1
 `sudo nano /etc/systemd/network/00-eth0.link`
 
